@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>อาจารย์ ดร.อนุวัตน์ เพ็งพุฒ | Dr. Anuwat Pengput - Academic Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        slate: {
+                            850: '#111827',
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Sarabun', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Sarabun', 'Inter', sans-serif; }
+        .glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+        }
+        .dark .glass {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col">
+
+    <nav class="sticky top-0 z-50 glass border-b border-slate-200 dark:border-slate-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-lg shadow-md">
+                        AP
+                    </div>
+                    <div>
+                        <a href="#hero" class="text-base sm:text-lg font-bold tracking-tight hover:text-emerald-600 dark:hover:text-emerald-400 transition">
+                            ดร.อนุวัตน์ เพ็งพุฒ
+                        </a>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 hidden sm:block">Biomedical Informatics & Public Health</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden md:flex items-center space-x-1 lg:space-x-6 text-sm font-medium">
+                    <a href="#about" class="px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition">เกี่ยวกับ</a>
+                    <a href="#education" class="px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition">การศึกษา</a>
+                    <a href="#teaching" class="px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition">การสอน</a>
+                    <a href="#publications" class="px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition">ผลงานวิชาการ</a>
+                    <a href="#skills" class="px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition">ทักษะ/รางวัล</a>
+                    <a href="#contact" class="px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 transition">ติดต่อ</a>
+                </div>
+
+                <!-- Action Controls -->
+                <div class="flex items-center space-x-2">
+                    <button id="themeToggle" aria-label="Toggle theme" class="p-2.5 rounded-full text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+                        <i class="fa-solid fa-moon dark:hidden text-lg"></i>
+                        <i class="fa-solid fa-sun hidden dark:block text-lg"></i>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="menuBtn" class="md:hidden p-2 rounded-md text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-2 pb-4 space-y-1">
+            <a href="#about" class="block px-3 py-2 rounded-md text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">เกี่ยวกับ</a>
+            <a href="#education" class="block px-3 py-2 rounded-md text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">การศึกษา & ประสบการณ์</a>
+            <a href="#teaching" class="block px-3 py-2 rounded-md text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">การจัดการเรียนการสอน</a>
+            <a href="#publications" class="block px-3 py-2 rounded-md text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">ผลงานวิชาการ</a>
+            <a href="#skills" class="block px-3 py-2 rounded-md text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">ทักษะ & สมาชิกภาพ</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">ติดต่อ</a>
+        </div>
+    </nav>
+
+    <header id="hero" class="relative py-16 md:py-24 overflow-hidden border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-8 space-y-6 text-center md:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium bg-emerald-100 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>ผู้เชี่ยวชาญด้านสารสนเทศชีวเวชและสารสนเทศสาธารณสุข</span>
+                    </div>
+                    <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+                        อาจารย์ ดร.อนุวัตน์ เพ็งพุฒ
+                    </h1>
+                    <p class="text-lg text-slate-600 dark:text-slate-300 font-medium">
+                        Dr. Anuwat Pengput, Ph.D. (Biomedical Informatics)
+                    </p>
+                    <p class="text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
+                        อาจารย์และหัวหน้างานการจัดการเรียนการสอน หลักสูตรภาคปกติ สาขาวิชาสาธารณสุขชุมชน 
+                        <strong>วิทยาลัยการสาธารณสุขสิรินธร จังหวัดขอนแก่น</strong> 
+                        คณะสาธารณสุขศาสตร์และสหเวชศาสตร์ สถาบันพระบรมราชชนก กระทรวงสาธารณสุข
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-3 justify-center md:justify-start pt-2">
+                        <a href="mailto:anuwat@scphkk.ac.th" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-xl font-medium shadow-sm transition">
+                            <i class="fa-solid fa-envelope"></i> ติดต่อทางอีเมล
+                        </a>
+                        <a href="#publications" class="inline-flex items-center gap-2 bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-750 px-5 py-2.5 rounded-xl font-medium transition">
+                            <i class="fa-solid fa-book-bookmark text-emerald-600 dark:text-emerald-400"></i> ดูผลงานวิจัย
+                        </a>
+                    </div>
+
+                    <!-- External Profiles -->
+                    <div class="flex items-center gap-4 pt-4 justify-center md:justify-start text-slate-500 dark:text-slate-400">
+                        <span class="text-xs uppercase font-semibold tracking-wider text-slate-400">Academic Links:</span>
+                        <a href="https://github.com" target="_blank" title="GitHub" class="hover:text-slate-900 dark:hover:text-white text-xl transition"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://linkedin.com" target="_blank" title="LinkedIn" class="hover:text-blue-600 text-xl transition"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://scholar.google.com" target="_blank" title="Google Scholar" class="hover:text-blue-500 text-xl transition"><i class="fa-solid fa-graduation-cap"></i></a>
+                        <a href="https://researchgate.net" target="_blank" title="ResearchGate" class="hover:text-emerald-500 text-xl transition"><i class="fa-brands fa-researchgate"></i></a>
+                    </div>
+                </div>
+
+                <!-- Profile Card Summary -->
+                <div class="md:col-span-4">
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl space-y-4">
+                        <div class="flex items-center gap-4 border-b border-slate-100 dark:border-slate-700 pb-4">
+                            <div class="w-16 h-16 rounded-2xl bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-3xl text-emerald-600">
+                                <i class="fa-solid fa-user-doctor"></i>
+                            </div>
+                            <div>
+                                <h2 class="font-bold text-slate-900 dark:text-white">ข้อมูลการสังกัด</h2>
+                                <p class="text-xs text-slate-500 dark:text-slate-400">สถาบันพระบรมราชชนก</p>
+                            </div>
+                        </div>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex items-start gap-3 text-slate-600 dark:text-slate-300">
+                                <i class="fa-solid fa-location-dot mt-1 text-emerald-600"></i>
+                                <span>90/1 หมู่ 4 ถ.อนามัย ต.ในเมือง อ.เมืองขอนแก่น จ.ขอนแก่น 40000</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-slate-600 dark:text-slate-300">
+                                <i class="fa-solid fa-phone text-emerald-600"></i>
+                                <span>+66 97 107 4698</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-slate-600 dark:text-slate-300">
+                                <i class="fa-solid fa-at text-emerald-600"></i>
+                                <span class="break-all">anuwat@scphkk.ac.th</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+
+        <section id="about" class="scroll-mt-20">
+            <div class="text-center md:text-left mb-8">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">จุดเน้นและความเชี่ยวชาญ</h2>
+                <p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Research Interests & Expertise Focus</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-dna"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white mb-2">Biomedical Ontology</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">การพัฒนาและประยุกต์ใช้ออนโทโลยีชีวเวช (Cholangiocarcinoma Ontology) ในการวิเคราะห์ปัจจัยเสี่ยงและข้อมูลวิจัย</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white mb-2">Spatial Epidemiology & GIS</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">การวิเคราะห์ระบาดวิทยาเชิงพื้นที่และระบบสารสนเทศภูมิศาสตร์ในงานสาธารณสุขและการควบคุมโรค</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-xl bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white mb-2">AI & Health Informatics</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">การใช้ปัญญาประดิษฐ์ วิทยาการข้อมูล (R, Python, SQL) และการวิจัยเชิงสังเคราะห์ (Systematic Reviews)</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-900/50 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-notes-medical"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white mb-2">Primary Care & R2R</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">การพัฒนางานประจำสู่งานวิจัย (R2R) และระบบบริการสุขภาพปฐมภูมิในระดับพื้นที่</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="scroll-mt-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Education Timeline -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="p-2.5 rounded-xl bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400">
+                            <i class="fa-solid fa-graduation-cap text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">ประวัติการศึกษา</h2>
+                    </div>
+
+                    <div class="relative border-l-2 border-slate-200 dark:border-slate-700 ml-4 space-y-8 pl-6">
+                        <div class="relative">
+                            <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-emerald-600 border-4 border-white dark:border-slate-900"></span>
+                            <span class="text-xs font-semibold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-300">2020 - 2024</span>
+                            <h3 class="font-bold text-slate-900 dark:text-white text-lg mt-1">Ph.D. in Biomedical Informatics</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 font-medium">University at Buffalo, SUNY, USA</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Dissertation: Development and Use of Cholangiocarcinoma Ontology for Analysis of Risk Factors in a Research Cohort in Thailand</p>
+                        </div>
+
+                        <div class="relative">
+                            <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-emerald-600 border-4 border-white dark:border-slate-900"></span>
+                            <span class="text-xs font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">2018 - 2020</span>
+                            <h3 class="font-bold text-slate-900 dark:text-white text-lg mt-1">M.S. in Biomedical Informatics</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 font-medium">University at Buffalo, SUNY, USA</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Project: Spatial Epidemiological Analysis and GIS of Opioid Overdoses in NY State</p>
+                        </div>
+
+                        <div class="relative">
+                            <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-400 border-4 border-white dark:border-slate-900"></span>
+                            <span class="text-xs font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">2557 - 2559</span>
+                            <h3 class="font-bold text-slate-900 dark:text-white text-lg mt-1">ส.ม. (ชีวสถิติ)</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 font-medium">มหาวิทยาลัยขอนแก่น</p>
+                        </div>
+
+                        <div class="relative">
+                            <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-400 border-4 border-white dark:border-slate-900"></span>
+                            <span class="text-xs font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">2550 - 2554</span>
+                            <h3 class="font-bold text-slate-900 dark:text-white text-lg mt-1">ส.บ. (สาธารณสุขศาสตร์)</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 font-medium">มหาวิทยาลัยขอนแก่น</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work Experience Timeline -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="p-2.5 rounded-xl bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400">
+                            <i class="fa-solid fa-briefcase text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">ประสบการณ์ทำงาน</h2>
+                    </div>
+
+                    <div class="relative border-l-2 border-slate-200 dark:border-slate-700 ml-4 space-y-8 pl-6">
+                        <div class="relative">
+                            <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-blue-600 border-4 border-white dark:border-slate-900"></span>
+                            <span class="text-xs font-semibold px-2 py-0.5 rounded bg-blue-100 text-blue-800 dark:bg-blue-900/60 dark:text-blue-300">2568 - ปัจจุบัน</span>
+                            <h3 class="font-bold text-slate-900 dark:text-white text-lg mt-1">หัวหน้างานการจัดการเรียนการสอน หลักสูตรปกติ</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 font-medium">วิทยาลัยการสาธารณสุขสิรินธร จังหวัดขอนแก่น</p>
+                        </div>
+
+                        <div class="relative">
+                            <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-blue-600 border-4 border-white dark:border-slate-900"></span>
+                            <span class="text-xs font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">2566 - ปัจจุบัน</span>
+                            <h3 class="font-bold text-slate-900 dark:text-white text-lg mt-1">อาจารย์ประจำสาขาวิชาสาธารณสุขชุมชน</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 font-medium">วิทยาลัยการสาธารณสุขสิรินธร จังหวัดขอนแก่น</p>
+                        </div>
+
+                        <div class="relative">
+                            <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-400 border-4 border-white dark:border-slate-900"></span>
+                            <span class="text-xs font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">2560 - 2566</span>
+                            <h3 class="font-bold text-slate-900 dark:text-white text-lg mt-1">นักวิชาการสาธารณสุขชำนาญการ</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 font-medium">สำนักงานสาธารณสุขอำเภอห้วยเม็ก จ.กาฬสินธุ์</p>
+                        </div>
+
+                        <div class="relative">
+                            <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-400 border-4 border-white dark:border-slate-900"></span>
+                            <span class="text-xs font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">2552 - 2560</span>
+                            <h3 class="font-bold text-slate-900 dark:text-white text-lg mt-1">เจ้าพนักงาน / นักวิชาการสาธารณสุข</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 font-medium">รพ.สต.สงเปลือย อ.นามน จ.กาฬสินธุ์</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="teaching" class="scroll-mt-20">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">ภาระงานสอนและการจัดการเรียนการสอน</h2>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Teaching Courses & Academic Instruction</p>
+                </div>
+                <div class="inline-flex rounded-lg p-1 bg-slate-200 dark:bg-slate-800 text-xs font-medium">
+                    <button class="teaching-tab active-tab px-3 py-1.5 rounded-md" onclick="filterTeaching('all', this)">ทั้งหมด</button>
+                    <button class="teaching-tab px-3 py-1.5 rounded-md" onclick="filterTeaching('bachelor', this)">ปริญญาตรี</button>
+                    <button class="teaching-tab px-3 py-1.5 rounded-md" onclick="filterTeaching('master', this)">ปริญญาโท/อนุปริญญา</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="teaching-container">
+                <!-- AI Courses -->
+                <div class="teaching-card bachelor p-5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-300">2569 - ปัจจุบัน</span>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mt-2">AI ในชีวิตยุคดิจิทัล / การใช้ AI อย่างชาญฉลาด</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">หลักสูตร ส.บ. & ปวส.เวชกิจฉุกเฉิน</p>
+                </div>
+
+                <div class="teaching-card bachelor p-5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-300">2569 - ปัจจุบัน</span>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mt-2">วิทยาการระบาด (Epidemiology)</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">หลักสูตรสาธารณสุขศาสตรบัณฑิต</p>
+                </div>
+
+                <div class="teaching-card master p-5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm border-l-4 border-l-purple-500">
+                    <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-purple-100 text-purple-800 dark:bg-purple-900/60 dark:text-purple-300">2568 - ปัจจุบัน (ป.โท)</span>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mt-2">นวัตกรรมและเทคโนโลยีดิจิทัลในงานสาธารณสุขปฐมภูมิ</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">หลักสูตรสาธารณสุขศาสตรมหาบัณฑิต</p>
+                </div>
+
+                <div class="teaching-card bachelor p-5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-slate-100 text-slate-700 dark:bg-slate-700 dark:text-slate-300">2567 - ปัจจุบัน</span>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mt-2">ชีวสถิติ & การวิจัยด้านสาธารณสุข 1 และ 2</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">หลักสูตรสาธารณสุขศาสตรบัณฑิต</p>
+                </div>
+
+                <div class="teaching-card bachelor p-5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-slate-100 text-slate-700 dark:bg-slate-700 dark:text-slate-300">2567 - ปัจจุบัน</span>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mt-2">คอมพิวเตอร์สำหรับงานสาธารณสุขชุมชน</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">หลักสูตรสาธารณสุขศาสตรบัณฑิต</p>
+                </div>
+
+                <div class="teaching-card bachelor p-5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-slate-100 text-slate-700 dark:bg-slate-700 dark:text-slate-300">2567 - ปัจจุบัน</span>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mt-2">การฝึกประสบการณ์สาธารณสุข 3 (ภาคชุมชน)</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">หลักสูตรสาธารณสุขศาสตรบัณฑิต</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications" class="scroll-mt-20">
+            <div class="space-y-6">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">ผลงานวิชาการและการเผยแพร่</h2>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Publications, Conferences & Invited Talks</p>
+                    </div>
+
+                    <!-- Filter Controls -->
+                    <div class="flex flex-wrap gap-2">
+                        <button onclick="filterPubs('all', this)" class="pub-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-emerald-600 text-white shadow-sm">ทั้งหมด</button>
+                        <button onclick="filterPubs('journal', this)" class="pub-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 text-slate-700 dark:text-slate-300">วารสารวิชาการ (Journals)</button>
+                        <button onclick="filterPubs('conference', this)" class="pub-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 text-slate-700 dark:text-slate-300">ประชุมวิชาการ (Conferences)</button>
+                        <button onclick="filterPubs('speaker', this)" class="pub-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 text-slate-700 dark:text-slate-300">การได้รับเชิญบรรยาย (Talks)</button>
+                    </div>
+                </div>
+
+                <!-- Search Input -->
+                <div class="relative max-w-md">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                    <input type="text" id="pubSearch" onkeyup="searchPubs()" placeholder="ค้นหาผลงานตามคำค้นหา เช่น Cholangiocarcinoma, Ontology, RCT..." class="w-full pl-9 pr-4 py-2 rounded-xl text-sm bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-emerald-500 outline-none">
+                </div>
+
+                <!-- Publications List -->
+                <div class="space-y-4" id="pub-list">
+                    <!-- Journal Item 1 -->
+                    <div class="pub-item journal p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm transition">
+                        <div class="flex items-start justify-between gap-2">
+                            <span class="text-xs font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-300">Journal Article (2026)</span>
+                            <a href="https://doi.org/10.1186/s13326-025-00345-2" target="_blank" class="text-slate-400 hover:text-emerald-600"><i class="fa-solid fa-arrow-up-right-from-square text-sm"></i></a>
+                        </div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mt-2 leading-snug">
+                            Ontology development and use for cholangiocarcinoma risk factors and predictions: a term enrichment data analysis and machine learning classification
+                        </h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1"><strong>Pengput, A.</strong>, Diehl, A. | <em>J Biomed Semant 17, 2 (2026)</em></p>
+                    </div>
+
+                    <!-- Journal Item 2 -->
+                    <div class="pub-item journal p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm transition">
+                        <div class="flex items-start justify-between gap-2">
+                            <span class="text-xs font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-300">Journal Article (2023)</span>
+                            <a href="https://doi.org/10.1016/j.hermed.2023.100739" target="_blank" class="text-slate-400 hover:text-emerald-600"><i class="fa-solid fa-arrow-up-right-from-square text-sm"></i></a>
+                        </div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mt-2 leading-snug">
+                            Quality of Reporting of Randomized Controlled Trials of Top 10 Herbs Prescribed in Thailand
+                        </h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1"><strong>Pengput, A.</strong>, Sucharit, C., Nopsopon, T., Sungthong, B., Pongpirul, K. | <em>Journal of Herbal Medicine (2023)</em></p>
+                    </div>
+
+                    <!-- Journal Item 3 -->
+                    <div class="pub-item journal p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm transition">
+                        <div class="flex items-start justify-between gap-2">
+                            <span class="text-xs font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-300">Journal Article (2022)</span>
+                            <a href="https://doi.org/10.1089/tmj.2021.0516" target="_blank" class="text-slate-400 hover:text-emerald-600"><i class="fa-solid fa-arrow-up-right-from-square text-sm"></i></a>
+                        </div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mt-2 leading-snug">
+                            Telemedicine in Southeast Asia: A Systematic Review
+                        </h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1"><strong>Pengput, A.</strong>, and Schwartz G., D. | <em>Telemedicine and e-Health (2022)</em></p>
+                    </div>
+
+                    <!-- Conference Item 1 -->
+                    <div class="pub-item conference p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm transition">
+                        <div class="flex items-start justify-between gap-2">
+                            <span class="text-xs font-bold px-2 py-0.5 rounded bg-blue-100 text-blue-800 dark:bg-blue-900/60 dark:text-blue-300">Conference Proceeding (2024)</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mt-2 leading-snug">
+                            Setting the Scene to Link SNOMED CT to Realism-Based Ontologies
+                        </h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1"><strong>Pengput, A.</strong>, & Ceusters, W. | <em>MedInfo 2023, Sydney, Australia</em></p>
+                    </div>
+
+                    <!-- Speaker Item 1 -->
+                    <div class="pub-item speaker p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm transition">
+                        <div class="flex items-start justify-between gap-2">
+                            <span class="text-xs font-bold px-2 py-0.5 rounded bg-purple-100 text-purple-800 dark:bg-purple-900/60 dark:text-purple-300">Invited Speaker (2025)</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mt-2 leading-snug">
+                            Biomedical Ontology for Cholangiocarcinoma Risk Factors and Predictions
+                        </h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Asian Neglected Tropical Diseases Conference (NTDASIA2025), Faculty of Medicine, Khon Kaen University</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="scroll-mt-20">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Skills -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm space-y-4">
+                    <h2 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                        <i class="fa-solid fa-code text-emerald-600"></i> ทักษะและความชำนาญ
+                    </h2>
+                    <div>
+                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Programming Languages</p>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-100 dark:bg-slate-700 font-medium">R</span>
+                            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-100 dark:bg-slate-700 font-medium">Python</span>
+                            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-100 dark:bg-slate-700 font-medium">SQL</span>
+                            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-100 dark:bg-slate-700 font-medium">Prolog</span>
+                            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-100 dark:bg-slate-700 font-medium">SPARQL</span>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Data & Ontology Software</p>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="px-2.5 py-1 text-xs rounded-md bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300">Protégé Ontology Editor</span>
+                            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-100 dark:bg-slate-700">SAS</span>
+                            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-100 dark:bg-slate-700">STATA</span>
+                            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-100 dark:bg-slate-700">SPSS</span>
+                            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-100 dark:bg-slate-700">QGIS / ArcGIS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Awards -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm space-y-4">
+                    <h2 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                        <i class="fa-solid fa-award text-amber-500"></i> รางวัลและเกียรติยศ
+                    </h2>
+                    <ul class="space-y-3 text-xs text-slate-600 dark:text-slate-300">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-star text-amber-500 mt-0.5"></i>
+                            <span><strong>2568:</strong> Full Member of Sigma Xi, The Scientific Research Honor Society</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-trophy text-amber-500 mt-0.5"></i>
+                            <span><strong>2568:</strong> 1st Place Poster Presentation Award (Advisor) at 2nd PHAS Conference</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-plane text-blue-500 mt-0.5"></i>
+                            <span><strong>2567:</strong> Travel Fellowship Award from ISB, India</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Memberships -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm space-y-4">
+                    <h2 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                        <i class="fa-solid fa-users text-blue-600"></i> สมาชิกองค์กรวิชาการ
+                    </h2>
+                    <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300">
+                        <li>• American Medical Informatics Association (AMIA)</li>
+                        <li>• International Association for Ontology & Applications</li>
+                        <li>• International Society for Biocuration (ISB)</li>
+                        <li>• The Cochrane Collaboration</li>
+                        <li>• Asia eHealth Information Network (AeHIN)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="scroll-mt-20">
+            <div class="p-8 sm:p-12 rounded-3xl bg-emerald-900 text-white relative overflow-hidden">
+                <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-4">
+                        <h2 class="text-3xl font-extrabold">ติดต่อ / สอบถามข้อมูล</h2>
+                        <p class="text-emerald-200 text-sm leading-relaxed">
+                            อาจารย์ ดร.อนุวัตน์ เพ็งพุฒ<br>
+                            วิทยาลัยการสาธารณสุขสิรินธร จังหวัดขอนแก่น<br>
+                            คณะสาธารณสุขศาสตร์และสหเวชศาสตร์ สถาบันพระบรมราชชนก
+                        </p>
+                        <div class="space-y-2 text-sm pt-2">
+                            <p class="flex items-center gap-3">
+                                <i class="fa-solid fa-envelope text-emerald-400"></i> anuwat@scphkk.ac.th
+                            </p>
+                            <p class="flex items-center gap-3">
+                                <i class="fa-solid fa-phone text-emerald-400"></i> +66 97 107 4698
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 text-center space-y-3">
+                        <h3 class="font-bold text-lg">ที่อยู่สำหรับการติดต่อทางไปรษณีย์</h3>
+                        <p class="text-xs text-emerald-100 leading-relaxed">
+                            90/1 หมู่ 4 ถนนอนามัย ตำบลในเมือง<br>
+                            อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs text-slate-500 dark:text-slate-400">
+        <p>© 2026 Dr. Anuwat Pengput. All rights reserved. | Built with Minimal Modern Tailwind CSS</p>
+    </footer>
+
+    <script>
+        // Dark / Light Mode Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Teaching Filter
+        function filterTeaching(category, btn) {
+            document.querySelectorAll('.teaching-tab').forEach(b => {
+                b.classList.remove('bg-white', 'dark:bg-slate-700', 'shadow-sm', 'text-slate-900', 'dark:text-white');
+            });
+            btn.classList.add('bg-white', 'dark:bg-slate-700', 'shadow-sm', 'text-slate-900', 'dark:text-white');
+
+            const cards = document.querySelectorAll('.teaching-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Publications Filter
+        function filterPubs(type, btn) {
+            document.querySelectorAll('.pub-btn').forEach(b => {
+                b.className = 'pub-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 text-slate-700 dark:text-slate-300';
+            });
+            btn.className = 'pub-btn px-3 py-1.5 rounded-lg text-xs font-medium bg-emerald-600 text-white shadow-sm';
+
+            const items = document.querySelectorAll('.pub-item');
+            items.forEach(item => {
+                if (type === 'all' || item.classList.contains(type)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Search Publications
+        function searchPubs() {
+            const input = document.getElementById('pubSearch').value.toLowerCase();
+            const items = document.querySelectorAll('.pub-item');
+            items.forEach(item => {
+                const text = item.innerText.toLowerCase();
+                if (text.includes(input)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
