@@ -55,8 +55,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-lg shadow-md">
-                        AP
+                    <div class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-lg shadow-md overflow-hidden ring-2 ring-emerald-500/30">
+                        <img src="https://raw.githubusercontent.com/anuwatpe/ap_port_th/main/ap-profile.jpg" alt="ดร.อนุวัตน์ เพ็งพุฒ" class="w-full h-full object-cover" onerror="this.onerror=null; this.parentElement.innerHTML='AP';">
                     </div>
                     <div>
                         <a href="#hero" class="text-base sm:text-lg font-bold tracking-tight hover:text-emerald-600 dark:hover:text-emerald-400 transition">
@@ -143,19 +143,23 @@
 
                 <!-- Profile Card Summary -->
                 <div class="md:col-span-4">
-                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl space-y-4">
-                        <div class="flex items-center gap-4 border-b border-slate-100 dark:border-slate-700 pb-4">
-                            <div class="w-16 h-16 rounded-2xl bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-3xl text-emerald-600">
-                                <i class="fa-solid fa-user-doctor"></i>
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xl space-y-4 text-center md:text-left">
+                        <div class="flex flex-col sm:flex-row items-center gap-4 border-b border-slate-100 dark:border-slate-700 pb-4">
+                            <div class="relative w-24 h-24 sm:w-20 sm:h-20 rounded-2xl overflow-hidden ring-4 ring-emerald-500/20 dark:ring-emerald-500/40 shadow-md shrink-0">
+                                <img src="https://raw.githubusercontent.com/anuwatpe/ap_port_th/main/ap-profile.jpg" 
+                                     alt="อาจารย์ ดร.อนุวัตน์ เพ็งพุฒ" 
+                                     class="w-full h-full object-cover"
+                                     onerror="this.onerror=null; this.src='https://placehold.co/300x300/16a34a/ffffff?text=Dr.Anuwat';">
                             </div>
                             <div>
-                                <h2 class="font-bold text-slate-900 dark:text-white">ข้อมูลการสังกัด</h2>
-                                <p class="text-xs text-slate-500 dark:text-slate-400">สถาบันพระบรมราชชนก</p>
+                                <h2 class="font-bold text-slate-900 dark:text-white text-base sm:text-lg">อาจารย์ ดร.อนุวัตน์ เพ็งพุฒ</h2>
+                                <p class="text-xs text-emerald-600 dark:text-emerald-400 font-medium">หัวหน้างานการจัดการเรียนการสอน</p>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">สถาบันพระบรมราชชนก</p>
                             </div>
                         </div>
                         <div class="space-y-3 text-sm">
                             <div class="flex items-start gap-3 text-slate-600 dark:text-slate-300">
-                                <i class="fa-solid fa-location-dot mt-1 text-emerald-600"></i>
+                                <i class="fa-solid fa-location-dot mt-1 text-emerald-600 shrink-0"></i>
                                 <span>90/1 หมู่ 4 ถ.อนามัย ต.ในเมือง อ.เมืองขอนแก่น จ.ขอนแก่น 40000</span>
                             </div>
                             <div class="flex items-center gap-3 text-slate-600 dark:text-slate-300">
